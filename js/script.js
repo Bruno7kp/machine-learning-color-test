@@ -57,21 +57,13 @@ function getRgb(hex) {
 	} : null;
 }
 
-$(function () {
-	$('#colorPicker').colorpicker({
-		color: '#FFFFFF',
-		inline: true,
-		container: true,
-		useAlpha: false,
-		format: 'auto'
-	});
+let demoColorPicker = new iro.ColorPicker("#colorIro", { width: 200, height: 200, color: "#ffffff" });
 
-	$('#colorPicker').on('colorpickerChange', function (event) {
-		const hex = event.color.toHexString();
-		document.body.style.background = hex;
-		inputHexa.value = hex;
-		if (trained.length > 0) {
-			update(hex);
-		}
-	});
+demoColorPicker.on("color:change", function (color, changes) {
+	const hex = color.hexString;
+	document.body.style.background = hex;
+	inputHexa.value = hex;
+	if (trained.length > 0) {
+		update(hex);
+	}
 });
