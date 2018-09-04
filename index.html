@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row p-2 pt-4">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                Selecione uma cor:
+                            </div>
+                            <div class="card-body text-center">
+                                <div id="colorPicker"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                Dados:
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input class="form-control" name="setColor" id="setColor" type="text" placeholder="Cor hexadecimal" value="#FFFFFF">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select name="setTextColor" id="setTextColor" class="form-control">
+                                            <option value="light">Texto Claro</option>
+                                            <option value="dark">Texto Escuro</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-9 mt-2 pt-2">
+                                        Texto Claro: <span id="light">0 %</span> |
+                                        Texto Escuro: <span id="dark">0 %</span>
+                                    </div>
+                                    <div class="col-sm-3 mt-2 text-right">
+                                        <button id="setInfo" class="btn btn-success">Adicionar</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Cor</th>
+                                            <th>Hexadecimal</th>
+                                            <th>Cor do texto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 text-justify page-content" style="color: black;">
+                <h4 class="text-center">Texto</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ligula aliquet, gravida arcu sed,
+                    finibus erat. Maecenas dictum, sapien eu molestie consectetur, purus dui eleifend urna, at consequat
+                    mauris risus eget ex. Morbi vel diam ut nisl consectetur mollis et eu magna. Fusce rutrum lorem ut volutpat
+                    sollicitudin. Fusce tempor dui in ornare pretium. Suspendisse potenti. Suspendisse non risus nec velit
+                    dictum ornare. Mauris mattis iaculis tempus. Sed congue, ante at iaculis lobortis, libero elit dapibus
+                    sapien, vitae tempus nulla risus eget urna.</p>
+
+                <p>Proin lectus neque, faucibus a enim eget, venenatis varius libero. Aenean vel porta lorem, at euismod
+                    nisi. Quisque rhoncus, dolor et venenatis volutpat, est tortor lacinia sapien, at egestas erat dolor
+                    nec augue. Mauris molestie lorem in lacus auctor, nec sollicitudin erat placerat. Donec id congue lectus,
+                    id tristique mi. Phasellus eu volutpat massa. Phasellus commodo pulvinar velit, rhoncus volutpat urna
+                    auctor vel. Vestibulum blandit, metus a cursus convallis, eros mi bibendum quam, sed commodo mauris augue
+                    vel ex. Nunc lacinia egestas scelerisque. Cras ornare dolor quis dui semper, at ultricies neque mollis.
+                    Etiam egestas varius feugiat. Proin porttitor diam eu mi pellentesque gravida.</p>
+
+                <p>Nunc at volutpat justo. Phasellus dignissim felis et ante aliquet, at tempus lorem dignissim. Etiam fermentum
+                    at tortor facilisis malesuada. Sed non posuere arcu, sed eleifend eros. Donec fringilla felis quis magna
+                    finibus, eget condimentum odio iaculis. Nunc malesuada nisl vel ante hendrerit, eu euismod ipsum faucibus.
+                    Sed libero metus, efficitur at sollicitudin ut, porttitor eget est. Proin et lacus id lectus pharetra
+                    finibus. Sed eget maximus nisi. Nullam eu mauris ultricies, semper mauris sit amet, gravida metus. Mauris
+                    congue lorem non ultricies porttitor.</p>
+
+                <p>Duis ac sagittis ligula. Nullam non metus viverra mauris aliquam porttitor id sed ex. Morbi convallis
+                    tempus mollis. Duis eget condimentum lectus. Nunc consectetur arcu eget tincidunt efficitur. Suspendisse
+                    facilisis pellentesque quam, vel commodo arcu laoreet non. Vestibulum dictum dignissim magna ac maximus.
+                    Cras nisi ante, tempus sed lacinia vitae, tristique vel mi. Suspendisse eget dignissim tortor. Integer
+                    nec tellus ullamcorper, vehicula sapien sollicitudin, eleifend orci. Duis quis est nec tellus finibus
+                    mattis id in velit. Vestibulum vulputate vel massa in hendrerit. Mauris nisi nunc, ornare sit amet nunc
+                    vel, porta blandit ipsum. Integer iaculis purus a dictum ullamcorper. Vestibulum auctor, purus eu convallis
+                    venenatis, massa est feugiat ligula, id malesuada urna lectus vel orci.</p>
+
+                <p>Donec a justo massa. Suspendisse sit amet lobortis sem, ac tristique mauris. Nulla tincidunt cursus ipsum,
+                    eget faucibus velit sodales et. Maecenas ante ipsum, dignissim at ligula eget, viverra finibus sem. Pellentesque
+                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec massa quam, efficitur
+                    nec odio euismod, commodo porta nisl. Phasellus lacinia felis augue, vel sodales leo pharetra nec. Curabitur
+                    tristique dignissim metus a tristique. Vivamus interdum risus non odio porttitor vulputate. Nam vulputate
+                    magna et ipsum egestas, vitae suscipit nulla consectetur. Duis tristique nibh non dictum consequat.</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/brain.min.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-colorpicker.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
